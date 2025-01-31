@@ -12,11 +12,11 @@ spring:
         enabled: true
         options:
           model: nomic-embed-text
-  neo4j:
-    authentication:
-      password: password
-      username: neo4j
-    uri: neo4j+s://localhost
+    vectorstore:
+      redis:
+        uri: "redis://localhost:6379"
+        initialize-schema: true
+        embeddingDimension: 768
   h2:
     console:
       enabled: true
