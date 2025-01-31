@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS weather (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    record_date DATE NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    temperature DECIMAL(5,2) NOT NULL,
+    is_raining BOOLEAN NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
